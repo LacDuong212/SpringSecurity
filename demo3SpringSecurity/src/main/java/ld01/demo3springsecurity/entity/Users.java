@@ -25,7 +25,7 @@ public class Users {
     @Column(length = 60, columnDefinition = "nvarchar(50) not null")
     private String name;
     private String password;
-    private String enabled;
+    private Boolean enabled;
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(
